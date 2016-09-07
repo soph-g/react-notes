@@ -3,13 +3,13 @@ import { shallow } from 'enzyme';
 import Root from '../../src/containers/Root';
 
 describe('(Container) Root', () => {
+  const wrapper = shallow(<Root />);
+
   it('renders ad a <div>', () => {
-    const wrapper = shallow(<Root />);
     expect(wrapper.type()).to.eql('div');
   });
 
   it('has style with height 100%', () => {
-    const wrapper = shallow(<Root />);
     const expectedStyles = {
       height: '100%',
       background: '#333'
@@ -18,7 +18,6 @@ describe('(Container) Root', () => {
   });
 
   it('contains a header explaining the app', () => {
-    const wrapper = shallow(<Root />);
     expect(wrapper.find('.welcome-header')).to.have.length(1);
   });
 })
