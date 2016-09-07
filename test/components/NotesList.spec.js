@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NotesList from '../../src/components/NotesList';
+import Note from '../../src/components/Note';
 
 import {
   mount,
@@ -13,11 +14,14 @@ describe('(Component) NotesList', () => {
   const mainTag = wrapper.type()
 
   it('renders a list of notes', () => {
-    //looks at content of wrapper:
-    expect(wrapper.contains(<ul></ul>)).to.equal(true);
     //looks at type of tag
     expect(mainTag).to.equal("ul");
+  });
+
+  it('displays notes', () => {
+    expect(wrapper.contains(<ul><Note>This is a note</Note></ul>)).to.equal(true)
   })
+
 
 
 })

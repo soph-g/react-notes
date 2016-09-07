@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import NotesList from 'components/NotesList'
 
-class Root extends React.Component {
-  render() {
-    return <h1> Hello World </h1>;
-  }
-}
-
-ReactDOM.render(<Root />, document.getElementById('root'))
+ReactDOM.render(<NotesList />, document.getElementById('list'))
