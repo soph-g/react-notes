@@ -5,8 +5,8 @@ var path = require('path');                // a useful node path helper library
 
 var config = {
   entry: [
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:3000',
+    // 'webpack/hot/dev-server',
+    // 'webpack-dev-server/client?http://localhost:3000',
     './src/main.js'
   ],                // the entry point for our app
   resolve: {

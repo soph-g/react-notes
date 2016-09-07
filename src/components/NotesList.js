@@ -10,8 +10,6 @@ class NotesList extends React.Component {
   }
 
   render() {
-    console.log(2)
-    console.log(this.state.notes)
     return (
       <ul>
         {this.state.notes.map(this.eachNote)}
@@ -21,8 +19,6 @@ class NotesList extends React.Component {
   componentWillMount() {
     var self = this
     $.getJSON("https://spy-api.herokuapp.com/apis?api-key=043d38e30b3685edff633897d9fd1483f54b7d1e&json=Notes", function(results) {
-        console.log(1);
-        console.log(results.notes);
         results.notes.forEach(function(note) {
           self.add(note);
         })
