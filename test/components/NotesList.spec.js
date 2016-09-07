@@ -22,6 +22,11 @@ describe('(Component) NotesList', () => {
     expect(wrapper.contains(<ul><Note>This is a note</Note></ul>)).to.equal(true)
   })
 
+  it('returns notes from a json file', () => {
+
+    expect(wrapper.getData()).to.be.a("object");
+  })
+
 
 
 })
